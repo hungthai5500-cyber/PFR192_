@@ -6,13 +6,9 @@
 
 #include<stdio.h>
 int main(){
-	char kt ='A';
-	printf("Gia tri ki tu: %c\n", kt);
-	printf("Gia tri thap phan: %d\n", kt);
-	printf("Gia tri hexa: %X\n",kt);
-	printf("Gia tri octal: %o\n", kt);
-	
-	printf(" Kich thuoc cua bien kt: %lu byte\n", sizeof(kt));
+	char kt ='a';
+	printf("%-15s |%-15s |%-15s |%-15s |%-15s |%-15s\n", "Ten Bien","GiaTri","Dec", "Hexa","Octal","Kich thuoc");
+    printf("%-15s |%-15c |%-15d |%-15X |%-15o |%-15lu\n","kt", kt, kt, kt, kt, sizeof(kt));
 	return 0;
 	
 }
