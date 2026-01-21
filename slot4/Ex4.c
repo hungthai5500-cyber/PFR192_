@@ -13,7 +13,7 @@ int main() {
     char Pheptoan;
 
     printf("Nhap vao a, b: ");
-    scanf("%d %d", &a, &b);
+    scanf("%d,%d", &a, &b);
 
     printf("Nhap phep toan: ");
     fflush(stdin);// xoa vung dem - Neu phep toan la /
