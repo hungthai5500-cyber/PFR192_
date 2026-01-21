@@ -1,17 +1,33 @@
-#include<stdio.h>
-int main(){
-	int N,t;
-	printf("Nhap so kWh da su dung: ");
-    scanf("%d", &N);
-    if (N<=100){
-       t= N * 950;
-  } else if (N<=150){
-	t= N * 1250;
-  }	else if (N<=200){
-	t= N* 1350;
-  }else {
-    t = N*1550;
-  }
-  printf("So tien phai tra la: %dVND\n",t);
-  return 0;
+//Tinh so chu dien.
+
+#include <stdio.h>
+int main()
+{
+	int N, t;
+	printf ("Nhap so chu dien: ");
+	scanf ("%d",&N);
+	if(N<=100)
+	{
+		t = N * 950;
+	}
+	else
+	{
+		if(N<=150)
+		{
+			t = (100 * 950) + (N - 100) * 1250;
+		}
+		else
+		{
+			if(N<=200)
+			{
+				t = (100 * 950) + (50 * 1250) + (N - 150) * 1350;
+			}
+			else
+			{
+				t = (100 * 950) + (50 * 1250) + (50 * 1350) + (N - 200) * 1550;
+			}
+		}
+	}
+	printf ("So tien dien la: %d", t);
+	return 0;
 }

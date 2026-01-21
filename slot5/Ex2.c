@@ -1,11 +1,11 @@
 //In ra gia tri max trong 3 so thuc a,b,c
+//Khai bao bien max
 
 #include<stdio.h>
 int main(){
 	float a, b, c, max;
 	printf ("Nhap a, b, c: ");
     scanf("%f %f %f", &a, &b, &c);
-
     max = a;         
     if (b>max) {
         max = b;
