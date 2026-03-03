@@ -55,7 +55,7 @@ int main(){
 			kq = a % b;
 			break;
 		default:
-			printf("Nhao sai !");
+			printf("Nhap sai !");
 			return 0;
 	}
 	printf("\n%d %c %d = %.0f",a,phepToan,b,kq);
