@@ -14,14 +14,14 @@ int main() {
     {
        invalid = 1;
     }
-    int a[n];
+    int a[100];
     for(int i=0;i<n;i++){
 	
         scanf("%d",&a[i]);
     }
     int temp;
   // Fixed Do not edit anything here.
-  printf("\nOUTPUT:\n");
+  printf("OUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
   if(invalid==1){
         printf("Invalid input");

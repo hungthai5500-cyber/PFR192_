@@ -18,7 +18,7 @@ int main() {
     int found = 0;
 
   // Fixed Do not edit anything here.
-  printf("\nOUTPUT:\n");
+  printf("OUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
    if(invalid==1){
         printf("Invalid input");

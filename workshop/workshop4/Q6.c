@@ -35,7 +35,7 @@ int main() {
     // Thực hiện lọc chuỗi
     filterString(input);
 
-    printf("\nOUTPUT:\n");
+    printf("OUTPUT:\n");
     printf("%s\n", input);
 
     //--FIXED PART

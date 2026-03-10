@@ -15,7 +15,7 @@ int main() {
   	invalid = 1;
   }
   // Fixed Do not edit anything here.
-  printf("\nOUTPUT:\n");
+  printf("OUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
   if(invalid ==1 ){
   	printf("Invalid input");

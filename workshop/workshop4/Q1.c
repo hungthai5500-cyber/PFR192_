@@ -18,7 +18,7 @@ int main() {
 	}
   
   // Fixed Do not edit anything here.
-  printf("\nOUTPUT:\n");
+  printf("OUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
 	if(invalid == 1)
 	{

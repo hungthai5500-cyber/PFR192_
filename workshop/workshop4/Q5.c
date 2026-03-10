@@ -46,7 +46,7 @@ int main() {
 			}
    
     // OUTPUT: Hiển thị kết quả ra màn hình
-    printf("\nOUTPUT:\n");
+    printf("OUTPUT:\n");
     if(invalid==1)
     {
         printf("Invalid input");
