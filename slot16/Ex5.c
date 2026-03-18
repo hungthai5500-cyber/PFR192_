@@ -11,14 +11,12 @@
 
 int main()
 {
-    int x, y;
-
-    printf("Nhap x, y: ");
-    scanf("%d %d",&x, &y);
-
-    hoanDoi(&x, &y);
-
-    printf("Sau khi hoan doi: %d %d", x, y);
+    int a, b;
+    printf("Nhap 2 so nguyen: ");
+    scanf("%d %d",&a, &b);
+    
+    hoanDoi(&a, &b);
+    printf("Sau khi hoan doi: %d %d", a, b);
 
     return 0;
 }*/
@@ -38,11 +36,12 @@ int main()
  }
  
  int main(){
- 	int x,y,z;
- 	printf("Nhap x, y, z: ");
- 	scanf("%d %d %d", &x,&y,&z);
+ 	int a,b,c;
+ 	printf("Nhap 3 so nguyen: ");
+ 	scanf("%d %d %d", &a,&b,&c);
  	
- 	hoanDoi(&x,&y,&z);
- 	printf("HoanDoi: %d %d %d",x,y,z);
+ 	hoanDoi(&a,&b,&c);
+ 	printf("HoanDoi: %d %d %d",a,b,c);
+ 	
  	return 0;
  }

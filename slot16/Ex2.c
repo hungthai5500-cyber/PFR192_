@@ -16,7 +16,6 @@ int isVowel(char c)
     {
         return 1; // là nguyên âm
     }
-
     return 0; // không phải nguyên âm
 }
 
@@ -32,11 +31,8 @@ int countVowel(char *input)
     {
         // *(input + i) là ký tự tại vị trí i
         if (isVowel(*(input + i)))
-        {
             count++; // tăng biến đếm
-        }
     }
-
     return count; // trả về tổng số nguyên âm
 }
 
@@ -44,11 +40,11 @@ int countVowel(char *input)
 int main()
 {
     char input[100];  // khai báo chuỗi tên input
-
-    printf("Nhap chuoi: ");
+    printf("Nhap 1 chuoi: ");
 
     // nhập chuỗi từ bàn phím
     fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0';
 
     // gọi hàm countVowel
     int result = countVowel(input);

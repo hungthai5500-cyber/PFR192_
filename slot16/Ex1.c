@@ -41,6 +41,7 @@ int main()
     // nhập chuỗi từ bàn phím
     printf("Nhap chuoi: ");
     fgets(input, sizeof(input), stdin);
+    input[strcspn(input, "\n")] = '\0';
     // gọi hàm countVowel để đếm số nguyên âm
     int result = countVowel(input);
     // in kết quả

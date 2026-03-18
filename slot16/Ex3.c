@@ -13,7 +13,7 @@ void reverseString(char *input)
     // duyệt chuỗi từ cuối về đầu
     for(int i = length - 1; i >= 0; i--)
     {
-        printf("%c ", *(input + i)); // in ký tự bằng con trỏ
+        printf("%c", *(input + i)); // in ký tự bằng con trỏ
     }
 }
 
