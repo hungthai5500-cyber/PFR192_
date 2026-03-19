@@ -1,42 +1,46 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
 
 int main() {
-    char chuoi[1000] = "";
-    
-    printf("INPUT:\n");
-    // Doc chuoi tong hop (gom cac chu so, chu cai, va ky tu dac biet). Chon fgets cho de dang doc khoang trang.
-    fgets(chuoi, sizeof(chuoi), stdin);
-    int so_chu_so = 0;
-    int so_chu_cai = 0;
-    int so_ky_tu_khac = 0;
-    
-    int i = 0;
-    // Phat hien va phan loai cac nhom ky tu co mat
-    while (chuoi[i] != '\0') {
-        // Neu muc tieu la xuong dong do qua trinh quet cua fgets, chuyen thanh null hoac khong dem no vao danh sach
-        if (chuoi[i] == '\n') {
-            chuoi[i] = '\0';
-            break;
-        }
-        
-        // Nhom 1: Chu so tu (0 den 9)
-        if (chuoi[i] >= '0' && chuoi[i] <= '9') {
-            so_chu_so++;
-        }
-        // Nhom 2: Chu cai thuong va in hoa (a den z hoac tu A den Z)
-        else if ((chuoi[i] >= 'a' && chuoi[i] <= 'z') || (chuoi[i] >= 'A' && chuoi[i] <= 'Z')) {
-            so_chu_cai++;
-        }
-        // Nhom 3: Moi loai ky tu/khoang trang khac
-        else {
-            so_ky_tu_khac++;
-        }
-        i++;
-    }
-    printf("\nOUTPUT:\n");
-    // In theo so thu tu duoc quy dinh boi de bai: chu so -> chu cai -> cac ky tu khac
-    printf("%d\n", so_chu_so);
-    printf("%d\n", so_chu_cai);
-    printf("%d\n", so_ky_tu_khac);
-    return 0;
+  system("cls");
+  printf("INPUT:\n");
+  
+  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
+  char str[200];
+  int digits = 0, letters = 0, others = 0;
+
+  // Read the mixed string including spaces
+  scanf("%[^\n]", str);
+
+  // Iterate through the string manually
+  for (int i = 0; str[i] != '\0'; i++) {
+      // Check if it's a letter (A-Z or a-z)
+      if ((str[i] >= 'a' && str[i] <= 'z') || (str[i] >= 'A' && str[i] <= 'Z')) {
+          letters++;
+      }
+      // Check if it's a digit (0-9)
+      else if (str[i] >= '0' && str[i] <= '9') {
+          digits++;
+      }
+      // Everything else (spaces, @, #, !, etc.)
+      else {
+          others++;
+      }
+  }
+
+  // Fixed Do not edit anything here.
+  printf("\nOUTPUT:\n");
+  
+  //@STUDENT: WRITE YOUR OUTPUT HERE:
+  printf("%d\n", digits);
+  printf("%d\n", letters);
+  printf("%d", others);
+
+  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+  printf("\n");
+  system ("pause");
+  return(0);
 }
