@@ -4,56 +4,41 @@
 #include <math.h>
 #include <ctype.h>
 
-typedef struct{
-	int x;
-	int y;
-}Point;
+typedef struct {
+    int bookID;
+    char name[50];
+}Book;
 
-void inputPoint(Point *p, int n)
-{
-	for(int i = 0; i < n; i++)
-	{
-		scanf("%d%d", &(p+i)->x, &(p+i)->y);	//dùng con trỏ --> (p+i)->x, (p+i)->y
-	}
+void inputBook(Book list[], int n) {
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &list[i].bookID);
+        while (getchar() != '\n'); 
+
+        fgets(list[i].name, sizeof(list[i].name), stdin);
+        list[i].name[strcspn(list[i].name, "\n")] = '\0';
+    }
 }
-
-int cmpPoint(Point *p, int n)
-{
-	int maxId = 0;
-	for(int i = 0; i < n; i++)
-	{
-		if((p+i)->x + (p+i)->y > (p+maxId)->x + (p+maxId)->y)
-		{
-			maxId = i;
-		}
-	}
-	return maxId;
+void outputBook(Book *p, int n) {
+    for (int i = 0; i < n; i++) {
+        printf("(%d,%s)\n", p[i].bookID, p[i].name);
+    }
 }
-
-void outputPoint(Point *p, int n)
-{
-	int maxId = cmpPoint(p, n);
-	printf("(%d,%d)", (p+maxId)->x, (p+maxId)->y);
-}
-
 int main() {
-  system("cls");
-  //INPUT - @STUDENT:ADD YOUR CODE FOR INPUT HERE:
-  printf("\nINPUT:\n");
-	int n;
-	scanf("%d", &n);
-	Point p[n];
-	inputPoint(p, n);
-
-
-  // Fixed Do not edit anything here.
+    system("cls");
+    printf("INPUT:\n");
+    //INPUT - @STUDENT:listDD YOUR CODE FOR INPUT HERE:
+    int n;
+    scanf("%d", &n);
+    Book list[n];
+    inputBook(list, n);
+    
+    // Fixed Do not edit listnything here.
   printf("\nOUTPUT:\n");
   //@STUDENT: WRITE YOUR OUTPUT HERE:
-  outputPoint(p, n);
-
-
-
-  //--FIXED PART - DO NOT EDIT ANY THINGS HERE
+   outputBook(list, n);
+  
+  
+   //--FIXED PlistRT - DO NOT EDIT listNY THINGS HERE
   printf("\n");
   system ("pause");
   return(0);
